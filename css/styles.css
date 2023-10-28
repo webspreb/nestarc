@@ -1,0 +1,130 @@
+.bannerContainer{
+    height: 600px;
+    width: 100%;
+    background-color: aquamarine;
+    
+}
+
+.nav-scroller {
+    position:absolute;
+    top:30px;
+    right:300px;
+    z-index:10;
+}
+.nav-item{
+    width: 104px;
+    height:58px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.carousel-item {
+    height: 600px; /* Set your desired fixed height */
+    overflow: hidden;
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+  }
+
+
+@media (max-width: 576px) {
+    .col-lg-3.custom-col {
+      background-color: #ffcccc; /* Change this to your desired background color */
+      padding: 10px;
+    }
+  }
+.custom-col {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0px 10px 0;
+    height:330px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .custom-col h3{
+    font-size: 26;
+    font-family: 'Inria Sans';
+    font-weight: bold;
+  }
+  .custom-col p{
+    font-size: 20;
+    font-family: 'Inria Sans';
+    font-style: italic;
+  }
+  .custom-button {
+    background-color: #f5c87f; /* Background color for the button */
+    color: #000000; /* Text color */
+    padding: 12px 60px; /* Adjust padding as needed */
+    border: none; /* Remove the default button border */
+    border-top-left-radius: 15px; /* Round the top-left corner */
+    border-bottom-left-radius: 15px; /* Round the bottom-left corner */
+    border-top-right-radius: 0; /* Keep the top-right corner flat */
+    border-bottom-right-radius: 0; /* Keep the bottom-right corner flat */
+    display: block; /* Make the button a block element for full width */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    width:95%;
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+  }
+
+  .gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 28%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+  
+  .gallery-cell.is-selected {
+    background: #ED2;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+/* Apply the background image */
+.oneabove {
+  margin-top: 2rem;
+  background-image: url("../img/header/oneabove.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh; /* Set a height to ensure the div is visible */
+  
+}
+
+/* Additional styling for your content */
+.oneabove .col-md-6 {
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to your content for better readability */
+  padding: 20px;
+}
+
+footer{
+  background-color: #454545;
+}
+.footerp{
+  color: #EEE;
+  font-size: 16;
+}
+.footerp h4{
+  color:#f5c87f;
+}
+.followus{
+  font-size: 14;
+  font-family: "kite-one";
+  font-style: italic;
+}

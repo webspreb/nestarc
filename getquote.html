@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single-Page Multi-Section Radio Button Form</title>
+    <style>
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form id="multiSectionForm">
+        <!-- Section 1 -->
+        <div class="form-section active" id="section1">
+            <h2>Section 1</h2>
+            <label>Select an option:</label><br>
+            <input type="radio" name="section1Option" value="Option A"> Option A<br>
+            <input type="radio" name="section1Option" value="Option B"> Option B<br>
+            <button type="button" onclick="nextSection(1)">Next</button>
+        </div>
+        
+        <!-- Section 2 -->
+        <div class="form-section" id="section2">
+            <h2>Section 2</h2>
+            <label>Select an option:</label><br>
+            <input type="radio" name="section2Option" value="Option X"> Option X<br>
+            <input type="radio" name="section2Option" value="Option Y"> Option Y<br>
+            <button type="button" onclick="prevSection(2)">Previous</button>
+            <button type="button" onclick="nextSection(2)">Next</button>
+        </div>
+        
+        <!-- Section 3 -->
+        <div class="form-section" id="section3">
+            <h2>Section 3</h2>
+            <label>Select an option:</label><br>
+            <input type="radio" name="section3Option" value="Option 1"> Option 1<br>
+            <input type="radio" name="section3Option" value="Option 2"> Option 2<br>
+            <button type="button" onclick="prevSection(3)">Previous</button>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script>
+        var currentSection = 1;
+
+        function nextSection(current) {
+            document.getElementById('section' + current).classList.remove('active');
+            currentSection = current + 1;
+            document.getElementById('section' + currentSection).classList.add('active');
+        }
+
+        function prevSection(current) {
+            document.getElementById('section' + current).classList.remove('active');
+            currentSection = current - 1;
+            document.getElementById('section' + currentSection).classList.add('active');
+        }
+    </script>
+</body>
+</html>
