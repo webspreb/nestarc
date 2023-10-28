@@ -1,63 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Single-Page Multi-Section Radio Button Form</title>
-    <style>
-        .form-section {
-            display: none;
-        }
-
-        .form-section.active {
-            display: block;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Nestarc</title>
+    <!-- Font Icons -->
+    <link media="all" rel="stylesheet" href="css/fonts/icomoon/icomoon.css">
+    <link media="all" rel="stylesheet" href="css/fonts/roxine-font-icon/roxine-font.css">
+    <link media="all" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.css">
+    <!-- Vendors -->
+    <link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.carousel.min.css">
+    <link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.theme.default.min.css">
+    <link media="all" rel="stylesheet" href="vendors/animate/animate.css">
+    <link media="all" rel="stylesheet" href="vendors/rateyo/jquery.rateyo.css">
+    <link media="all" rel="stylesheet" href="vendors/bootstrap-datepicker/css/bootstrap-datepicker.css">
+    <link media="all" rel="stylesheet" href="vendors/fancyBox/source/jquery.fancybox.css">
+    <link media="all" rel="stylesheet" href="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
+    <!-- Bootstrap 4 -->
+    <link media="all" rel="stylesheet" href="css/bootstrap.css">
+    <!-- Rev Slider -->
+    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/navigation.css">
+    <!-- Theme CSS -->
+    <link media="all" rel="stylesheet" href="css/main.css">
+    <!-- Custom CSS -->
+    <link media="all" rel="stylesheet" href="css/custom.css">
 </head>
-<body>
-    <form id="multiSectionForm">
-        <!-- Section 1 -->
-        <div class="form-section active" id="section1">
-            <h2>Section 1</h2>
-            <label>Select an option:</label><br>
-            <input type="radio" name="section1Option" value="Option A"> Option A<br>
-            <input type="radio" name="section1Option" value="Option B"> Option B<br>
-            <button type="button" onclick="nextSection(1)">Next</button>
-        </div>
-        
-        <!-- Section 2 -->
-        <div class="form-section" id="section2">
-            <h2>Section 2</h2>
-            <label>Select an option:</label><br>
-            <input type="radio" name="section2Option" value="Option X"> Option X<br>
-            <input type="radio" name="section2Option" value="Option Y"> Option Y<br>
-            <button type="button" onclick="prevSection(2)">Previous</button>
-            <button type="button" onclick="nextSection(2)">Next</button>
-        </div>
-        
-        <!-- Section 3 -->
-        <div class="form-section" id="section3">
-            <h2>Section 3</h2>
-            <label>Select an option:</label><br>
-            <input type="radio" name="section3Option" value="Option 1"> Option 1<br>
-            <input type="radio" name="section3Option" value="Option 2"> Option 2<br>
-            <button type="button" onclick="prevSection(3)">Previous</button>
-            <input type="submit" value="Submit">
-        </div>
-    </form>
 
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="form-card shadow p-3 mb-5 bg-white rounded">
+                    <form id="multiSectionForm">
+                        <!-- Section 1 -->
+                        <div class="form-section active ico-box has-shadow1" id="section1">
+                            <h3>Radio Buttons</h3>
+                            <div class="waituk_select-box">
+                                <div class="waituk_select-box-default square-box">
+                                    <input type="radio" name="radio1" id="radio7">
+                                    <label for="radio7">First Option default</label>
+                                </div>
+                                <div class="waituk_select-box-primary square-box">
+                                    <input type="radio" name="radio1" id="radio8">
+                                    <label for="radio8">Second Option primary</label>
+                                </div>
+                                <div class="waituk_select-box-secondary square-box">
+                                    <input type="radio" name="radio1" id="radio9" checked="">
+                                    <label for="radio9">Third Option secondary</label>
+                                </div>
+                            </div>
+                            <button type="button" onclick="nextSection(1, 2)">Next</button>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div class="form-section ico-box has-shadow1" id="section2">
+                            <h2>Section 2</h2>
+                            <div class="waituk_select-box">
+                                <div class="waituk_select-box-default square-box">
+                                    <input type="radio" name="radio2" id="radio13">
+                                    <label for="radio13">First Option default</label>
+                                </div>
+                                <div class="waituk_select-box-primary square-box">
+                                    <input type="radio" name="radio2" id="radio14">
+                                    <label for="radio14">Second Option primary</label>
+                                </div>
+                                <div class="waituk_select-box-secondary square-box">
+                                    <input type="radio" name="radio2" id="radio15" checked="">
+                                    <label for="radio15">Third Option secondary</label>
+                                </div>
+                            </div>
+                            <button type="button" onclick="prevSection(2, 1)">Previous</button>
+                            <button type="button" onclick="nextSection(2, 3)">Next</button>
+                        </div>
+
+                        <!-- Section 3 -->
+                        <div class="form-section ico-box has-shadow1" id="section3">
+                            <h2>Section 3</h2>
+                            <div class="waituk_select-box">
+                                <div class="waituk_select-box-default square-box">
+                                    <input type="radio" name="radio3" id="radio19">
+                                    <label for="radio19">First Option default</label>
+                                </div>
+                                <div class="waituk_select-box-primary square-box">
+                                    <input type="radio" name="radio3" id="radio20">
+                                    <label for="radio20">Second Option primary</label>
+                                </div>
+                                <div class="waituk_select-box-secondary square-box">
+                                    <input type="radio" name="radio3" id="radio21" checked="">
+                                    <label for="radio21">Third Option secondary</label>
+                                </div>
+                            </div>
+                            <button type="button" onclick="prevSection(3, 2)">Previous</button>
+                            <button type="button" onclick="nextSection(3, 4)">Next</button>
+                        </div>
+
+                        <!-- Section 4 -->
+                        <div class="form-section ico-box has-shadow1" id="section4">
+                            <h2>Section 4</h2>
+                            <form id="section4Form" action="process_form.php" method="POST">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name"><br><br>
+
+                                <label for="phoneNumber">Phone Number:</label>
+                                <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email"><br><br>
+
+                                <button type="button" onclick="prevSection(4, 3)">Previous</button>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="progress" style="margin-top: 20px;">
+                    <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <script>
         var currentSection = 1;
+        var numSections = 4; // Change this if you have more sections
 
-        function nextSection(current) {
-            document.getElementById('section' + current).classList.remove('active');
-            currentSection = current + 1;
-            document.getElementById('section' + currentSection).classList.add('active');
+        function updateProgressBar() {
+            var width = (currentSection - 1) / numSections * 100;
+            document.getElementById('progress-bar').style.width = width + '%';
         }
 
-        function prevSection(current) {
+        function nextSection(current, next) {
             document.getElementById('section' + current).classList.remove('active');
-            currentSection = current - 1;
+            currentSection = next;
             document.getElementById('section' + currentSection).classList.add('active');
+            updateProgressBar();
+        }
+
+        function prevSection(current, prev) {
+            if (current > 1) {
+                document.getElementById('section' + current).classList.remove('active');
+                currentSection = prev;
+                document.getElementById('section' + currentSection).classList.add('active');
+                updateProgressBar();
+            }
         }
     </script>
 </body>
+
 </html>

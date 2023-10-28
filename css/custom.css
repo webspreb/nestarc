@@ -32,3 +32,20 @@
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+.form-card {
+    border-radius: 5px;
+    padding: 20px 40px; /* Added padding */
+}
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+.fillable-section {
+    margin-top: 20px;
+}
