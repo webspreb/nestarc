@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Selected Option in Section 3: $selectedOption3\n";
 
     // Set the recipient email address
-    $to = "hlanjsdzcyniuneica@cazlp.com"; // Change this to your recipient's email address
+    $to = "admin@bitsbytesbuzz.com"; // Change this to your recipient's email address
 
     // Set the subject of the email
     $subject = "Form Submission";
