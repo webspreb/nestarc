@@ -1,7 +1,9 @@
 .portfolio-banner{
     background-image: url(../img/header/header05.jpeg);
 }
-
+.quotation-block-v5 {
+    background-image: url('../img/header/header03.jpeg');
+}
 .modal-container {
     display: none;
     position: fixed;
