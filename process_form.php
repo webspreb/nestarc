@@ -27,9 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: thank_you.html"); // Change this to the actual thank you page
         exit();
     } else {
-        echo "Error: Unable to send email.";
+        $lastError = error_get_last();
+        echo "Error: Unable to send email. Error details: " . print_r($lastError, true);
     }
-} else {
-    // Handle invalid requests
-    echo "Invalid request";
 }
