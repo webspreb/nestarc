@@ -1,4 +1,6 @@
 <?php
+ob_start(); // Start output buffering
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the data from the form
     $name = $_POST["name"];
@@ -24,9 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email
     if (mail($to, $subject, $message)) {
+        ob_end_flush(); // Send the output to the browser
         header("Location: thank_you.html"); // Change this to the actual thank you page
         exit();
     } else {
+        ob_end_clean(); // Discard the output buffer
         $lastError = error_get_last();
         echo "Error: Unable to send email. Error details: " . print_r($lastError, true);
     }

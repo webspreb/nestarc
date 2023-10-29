@@ -35,7 +35,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="form-card shadow p-3 mb-5 bg-white rounded">
-                    <form id="multiSectionForm">
+                    <form id="multiSectionForm" action="process_form.php" method="POST">
                         <!-- Section 1 -->
                         <div class="form-section active ico-box has-shadow1" id="section1">
                             <h3>Radio Buttons</h3>
@@ -101,7 +101,6 @@
                         <!-- Section 4 -->
                         <div class="form-section ico-box has-shadow1" id="section4">
                             <h2>Section 4</h2>
-                            <form id="section4Form" action="process_form.php" method="POST">
                                 <label for="name">Name:</label>
                                 <input type="text" id="name" name="name"><br><br>
                         
@@ -114,8 +113,7 @@
                                 <!-- Add radio buttons for Section 4 here -->
                         
                                 <button type="button" onclick="prevSection(4, 3)">Previous</button>
-                                <button type="submit">Submit</button>
-                            </form>
+                                <input type="submit" value="Submit">
                         </div>
                     </form>
                 </div>
