@@ -26,12 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email
     if (mail($to, $subject, $message)) {
-        ob_end_flush(); // Send the output to the browser
-        header("Location: thank_you.html"); // Change this to the actual thank you page
-        exit();
+        // Email sent successfully
+        echo "Email sent successfully.";
     } else {
-        ob_end_clean(); // Discard the output buffer
-        $lastError = error_get_last();
-        echo "Error: Unable to send email. Error details: " . print_r($lastError, true);
+        // Email sending failed
+        echo "Email sending failed.";
     }
 }
