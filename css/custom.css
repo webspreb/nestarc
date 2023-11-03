@@ -29,6 +29,7 @@
 /* Styles for the modal content */
 .modal-content {
     position: absolute;
+    z-index: 3;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
