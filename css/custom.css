@@ -1,8 +1,20 @@
 .portfolio-banner{
     background-image: url(../img/header/header05.jpeg);
 }
+.information-block {
+  background-image: url(../img/header/header09.jpeg);
+}
+.about-banner {
+    background-image: url('../img/header/header02.jpg');
+}
+/* CSS to hide the section below the header at initialization */
+
+
 .quotation-block-v5 {
-    background-image: url('../img/header/header03.jpeg');
+    background-image: url(../img/header/header03.jpeg);
+}
+.hide{
+    visibility: hidden;
 }
 .modal-container {
     display: none;

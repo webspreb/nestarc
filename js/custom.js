@@ -1,21 +1,11 @@
+// Function to show the content section
+function showContentSection() {
+    var contentSection = document.querySelector('.hide');
+    contentSection.style.visibility = 'visible';
+}
 
-var modal = document.getElementById('modal');
-var openModalLink = document.getElementById('openPopupLink');
-var closeModalButton = document.getElementById('closeModalButton');
-
-openModalLink.addEventListener('click', function() {
-    modal.style.display = 'block';
-});
-
-closeModalButton.addEventListener('click', function() {
-    modal.style.display = 'none';
-});
-
-window.addEventListener('click', function(event) {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
+// Call the function after your animation is ready, for example, after 2 seconds
+setTimeout(showContentSection, 2000);
 
 var currentSection = 1;
 var numSections = 4; // Change this if you have more sections
@@ -47,3 +37,50 @@ function submitForm() {
     // Submit the form
     document.getElementById('multiSectionForm').submit();
 }
+document.getElementById("subscription-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var form = this;
+    var formData = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+    })
+    .then(function (response) {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.text();
+    })
+    .then(function (result) {
+        // Show the result in the resultPopup
+        document.getElementById("resultMessage").textContent = result;
+        document.getElementById("resultPopup").style.display = "block";
+        form.reset(); // Reset the form
+    })
+    .catch(function (error) {
+        console.error("Fetch error: ", error);
+        // Handle the error, e.g., display an error message in the resultPopup
+        document.getElementById("resultMessage").textContent = "An error occurred. Please try again later.";
+        document.getElementById("resultPopup").style.display = "block";
+    });
+});
+    // JavaScript to handle the modal
+    const openPopupLink = document.getElementById("openPopupLink");
+    const modal = document.getElementById("modal");
+    const closeModalButton = document.getElementById("closeModalButton");
+
+    openPopupLink.addEventListener("click", function() {
+        modal.style.display = "block";
+    });
+
+    closeModalButton.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    // Close the modal if the user clicks outside of it
+    window.addEventListener("click", function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
