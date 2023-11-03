@@ -3,9 +3,9 @@ function showContentSection() {
     var contentSection = document.querySelector('.hide');
     contentSection.style.visibility = 'visible';
 }
-
 // Call the function after your animation is ready, for example, after 2 seconds
-setTimeout(showContentSection, 2000);
+setTimeout(showContentSection, 2500);
+
 
 var currentSection = 1;
 var numSections = 4; // Change this if you have more sections
