@@ -5,7 +5,7 @@ function showContentSection() {
 }
 
 // Call the function after your animation is ready, for example, after 2 seconds
-setTimeout(showContentSection, 1000);
+setTimeout(showContentSection, 1700);
 
 var currentSection = 1;
 var numSections = 4; // Change this if you have more sections
