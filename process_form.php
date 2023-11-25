@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "admin@bitsbytesbuzz.com"; // Change this to your recipient's email address
 
     // Set the subject of the email
-    $subject = "Form Submission";
+    $subject = "Get Quote";
 
     // Send the email
     if (mail($to, $subject, $message)) {

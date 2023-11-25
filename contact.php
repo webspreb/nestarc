@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["con_email"];
     $message = $_POST["con_message"];
 
-    $to = "youremail@example.com"; // Replace with your email address
+    $to = "inquire@nestarc.in"; // Replace with your email address
     $subject = "Contact Form Submission";
     $messageBody = "First Name: $fname\n";
     $messageBody .= "Last Name: $lname\n";
